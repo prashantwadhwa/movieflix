@@ -1,0 +1,60 @@
+.pattern {
+  width: 100vw;
+  height: 100vh;
+  background-position: 50%;
+  background-size: cover;
+}
+
+.wrapper {
+  max-width: 110rem;
+  margin-inline: auto;
+
+  @media (max-width: 1200px) {
+    max-width: 80rem;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 60rem;
+  }
+}
+
+.home-btn {
+  @media (max-width: 767.98px) {
+    justify-content: center;
+  }
+
+  button {
+    transition: 0.3s all ease-in-out;
+    border-radius: 100%;
+    border: 2px ridge #9333ea;
+    background-color: white;
+    padding: 14px;
+
+    @media (min-width: 1024px) {
+      aspect-ratio: 1 / 1;
+      width: 54px;
+      height: 54px;
+    }
+
+    
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: #9333ea;
+    }
+
+    &:hover {
+      transition: 0.3s all ease-in-out;
+      background-color: rgb(231, 231, 231);
+      cursor: pointer;
+      svg {
+        fill: #9333ea;
+      }
+    }
+  }
+
+  &:focus-within {
+    outline: none;
+  }
+}
