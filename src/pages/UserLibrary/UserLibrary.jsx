@@ -178,16 +178,16 @@ function UserLibrary() {
         </motion.div>
       </motion.div>
 
+      {loading &&
+        Array.from({ length: 5 }).map((_, index) => (
+          <div
+            className="fav-movies-skeleton grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
+            key={index}
+          >
+            <CardSkeleton />
+          </div>
+        ))}
       <div className="flex flex-col gap-10">
-        {loading &&
-          Array.from({ length: 5 }).map((_, index) => (
-            <div
-              className="fav-movies-skeleton grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
-              key={index}
-            >
-              <CardSkeleton />
-            </div>
-          ))}
         <AnimatePresence mode="wait">
           {activeTab === "favorites" && (
             <motion.div
