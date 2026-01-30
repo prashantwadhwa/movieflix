@@ -180,7 +180,6 @@ function Home() {
       setTrendingMovie(firstMovie);
       setTrendingMovies(res.data.results);
       setTrendingLoading(false);
-      console.log("trening movies today-", res.data.results);
     } catch (error) {
       console.error("Some error occured", error);
       setTrendingLoading(false);
@@ -200,7 +199,6 @@ function Home() {
           };
         }),
       );
-      console.log(data);
       setSections(data);
       setGenresLoading(false);
     } catch (error) {

@@ -83,8 +83,6 @@ function Movie() {
 
       setMovie(res.data);
       setLoading(false);
-
-      console.log(res.data);
     } catch (error) {
       console.error("some error occured", error);
       setLoading(false);
@@ -125,7 +123,6 @@ function Movie() {
 
       setMovieImgs(enLogo.file_path);
       setLoading(false);
-      console.log(enLogo.file_path);
     } catch (error) {
       console.error("some error occured", error);
       setLoading(false);
@@ -148,7 +145,6 @@ function Movie() {
       );
 
       setTrailerKey(trailer?.key);
-      console.log("trailer", res.data.results);
       setLoading(false);
     } catch (error) {
       console.error("some error occured", error);
@@ -177,7 +173,6 @@ function Movie() {
       );
 
       setRecommendedMovies(res.data.results);
-      console.log("recc", res.data.results);
     } catch (error) {
       console.error("some error occured", error);
     }
@@ -198,7 +193,6 @@ function Movie() {
 
       setPopularMovies(res.data.results);
       setLoading(false);
-      console.log(res.data.results);
     } catch (error) {
       console.error("some error occured", error);
       setLoading(false);
@@ -212,8 +206,6 @@ function Movie() {
           api_key: import.meta.env.VITE_MOVIE_API,
         },
       });
-
-      console.log("reviews", res.data.results);
     } catch (error) {
       console.error("Some error occured", error);
     }
