@@ -1,0 +1,66 @@
+@keyframes rotate-gradient {
+  0% {
+    background: linear-gradient(90deg, #9333ea, #ec4899, #9333ea);
+  }
+  100% {
+    background: linear-gradient(360deg, #9333ea, #ec4899, #9333ea);
+  }
+}
+
+.nav-bg {
+  will-change: transform, opacity;
+  .nav-parent {
+    .nav-container {
+      .brand-logo {
+        .text-gradient {
+          font-weight: 700;
+          background: linear-gradient(90deg, #d8c8ff, #b48cff, #8f5bff);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+      }
+      .nav-items {
+        .nav-link {
+          position: relative;
+          isolation: isolate;
+          border-radius: 0.5rem;
+
+          &::before {
+            content: "";
+            opacity: 0;
+            z-index: -1;
+            inset: -2px;
+            border-radius: inherit;
+            transition: opacity 0.3s ease-in-out;
+            position: absolute;
+            background: radial-gradient(
+              circle,
+              rgba(147, 51, 234, 1) 0%,
+              rgb(146, 51, 234) 35%,
+              rgba(147, 51, 234, 0.53) 100%
+            );
+            filter: blur(14px);
+          }
+
+          &:hover::before {
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
+          }
+        }
+      }
+      .search-container {
+        background: #9333ea;
+        &:hover {
+          background: white;
+          .search-icon {
+            circle,
+            line {
+              color: blue !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
