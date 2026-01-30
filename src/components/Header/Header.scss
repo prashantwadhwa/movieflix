@@ -1,0 +1,20 @@
+.web-header {
+  .header-img {
+    width: 100%;
+    height: auto;
+    max-width: 32rem;
+  }
+
+  .header-text {
+    max-width: 56rem;
+    text-align: center;
+    font-weight: 700;
+    .text-gradient {
+      font-weight: 700;
+      background: linear-gradient(90deg, #d8c8ff, #b48cff, #8f5bff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+}
